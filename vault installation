@@ -33,3 +33,7 @@ listener "tcp" {
 systemctl restart vault
 ###how to unseal a vault
 vault operator init
+###oince you got all the key store it somewhere
+vault status
+##it will show you vault is locked 
+
