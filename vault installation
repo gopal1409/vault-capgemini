@@ -9,6 +9,7 @@ root@ip-172-31-6-230:~# history
     7  visudo
     8  shutdown -h now
     9  apt-get update
+    9.1 apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
    10  curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
    11  apt update
    12  apt install vault -y
