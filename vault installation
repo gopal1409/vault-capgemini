@@ -23,3 +23,11 @@ nano /etc/vault.d/vault.hcl
 ###to save it press ctrl x then press ctrl y and enter
    11  systemctl restart vault
    12  systemctl status vault
+   ###hvault accessable using any ip
+   # HTTP listener
+listener "tcp" {
+  address = "0.0.0.0:8200"
+  tls_disable = 1
+}
+###then press ctrl x after that press y and enter
+systemctl restart vault
