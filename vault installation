@@ -31,3 +31,5 @@ listener "tcp" {
 }
 ###then press ctrl x after that press y and enter
 systemctl restart vault
+###how to unseal a vault
+vault operator init
