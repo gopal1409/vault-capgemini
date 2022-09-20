@@ -24,3 +24,12 @@ capabilities = ["read"]
 149  vault policy write jenkins jenkins-policy.hcl
   150  vault policy list
   153  vault policy read jenkins
+  ###add the vagrant user in node machine
+    9  adduser vagrant
+   10  visudo
+   #add the vagrant user
+   ###to add the same Press Esc i
+   ###to save it press Esc :wq
+   systemctl restart sshd
+   11  history
+
