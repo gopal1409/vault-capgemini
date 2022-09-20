@@ -27,9 +27,5 @@ capabilities = ["read"]
   ###add the vagrant user in node machine
     9  adduser vagrant
    10  visudo
-   #add the vagrant user
-   ###to add the same Press Esc i
-   ###to save it press Esc :wq
+   ###press Ctrl X y and enter
    systemctl restart sshd
-   11  history
-
