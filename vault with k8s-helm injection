@@ -1,0 +1,19 @@
+#####install the helm chart
+340  wget https://get.helm.sh/helm-v3.10.0-linux-amd64.tar.gz
+  341  tar zxvf helm-v3.10.0-linux-amd64.tar.gz
+  342  ls
+  343  cd linux-amd64/
+  344  ls
+  345  mv helm /usr/bin/
+  346  helm
+  347  cd /root
+  348  history
+  349  helm repo add hashicorp https://helm.releases.hashicorp.com
+  350  helm repo update
+  351  helm install vault hashicorp/vault --set "injector.externalVaultAddr=http://3.236.175.226:8200"
+  352  helm status vault
+  353  helm get manifest vault
+  354  kubectl get pod
+  355  kubectl describe serviceaccount vault
+  356  kubectl get pod
+  357  helm get manifest vault
