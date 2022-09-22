@@ -8,3 +8,19 @@
   264  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
   265  docker --version
   266  systemctl status docker
+  ####how to install kind as kubernetes
+   268  curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.15.0/kind-linux-amd64
+  269  chmod +x ./kind
+  270  sudo mv ./kind /usr/local/bin/kind
+  271  kind create cluster
+  272  kubectl cluster-info --context kind-kind
+  273  sudo apt-get update
+  274  sudo apt-get install -y ca-certificates curl
+  275  sudo apt-get install -y apt-transport-https
+  276  echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+  277  sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+  278  sudo apt-get update
+  279  sudo apt-get install -y kubectl
+  280  kubectl get nodes
+  281  kubectl get pod
+  282  kubectl get pod --all-namespaces
