@@ -50,6 +50,9 @@ path "secret/data/devwebapp/config" {
   capabilities = ["read"]
 }
 EOF
+#enable kubernetes auth in vault
+ 370  vault auth enable kubernetes
+
 
 ####create an kubernetes authetication role devwebapp
  vault write auth/kubernetes/role/devweb-app      bound_service_account_names=internal-app      bound_service_account_namespaces=default      policies=devwebapp      ttl=24h
