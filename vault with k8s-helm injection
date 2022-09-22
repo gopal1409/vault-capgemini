@@ -53,8 +53,6 @@ path "secret/data/devwebapp/config" {
   capabilities = ["read"]
 }
 EOF
-#enable kubernetes auth in vault
-
 
 
 ####create an kubernetes authetication role devwebapp
