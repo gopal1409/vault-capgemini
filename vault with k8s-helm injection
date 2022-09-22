@@ -30,3 +30,6 @@ metadata:
     kubernetes.io/service-account.name: vault
 type: kubernetes.io/service-account-token
 
+###we need to store the token as environment varaible
+ 361  VAULT_HELM_SECRET_NAME=$(kubectl get secrets --output=json | jq -r '.items[].metadata | select(.name|startswith("vault-token-")).name')
+ 355  kubectl describe serviceaccount vault
