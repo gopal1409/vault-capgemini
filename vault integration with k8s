@@ -44,7 +44,7 @@ spec:
       image: burtlo/devwebapp-ruby:k8s
       env:
         - name: VAULT_ADDR
-        //change the vault ip to your ip
+        #change the vault ip to your ip
           value: "http://3.236.175.226:8200"
         - name: VAULT_TOKEN
           value: root
@@ -74,7 +74,7 @@ metadata:
   name: external-vault
 subsets:
   - addresses:
-  //change the ip address to your vault. 
+  #change the ip address to your vault. 
       - ip: 3.236.175.226
     ports:
       - port: 8200
