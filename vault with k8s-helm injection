@@ -17,3 +17,16 @@
   355  kubectl describe serviceaccount vault
   356  kubectl get pod
   357  helm get manifest vault
+  
+  ####if you have kubernetes 1.24 + only version it will display the token. the latest version of kubernetes is 1.26 which do not generate any token by default. 
+  ##3using the kubernetes secret api you need to generate the token. 
+  nano vault-secret.yml
+  #####inside vaultsecret.yml file add this below which will generate the token
+apiVersion: v1
+kind: Secret
+metadata:
+  name: vault-token-g955r
+  annotations:
+    kubernetes.io/service-account.name: vault
+type: kubernetes.io/service-account-token
+
