@@ -25,3 +25,7 @@
   280  kubectl get nodes
   281  kubectl get pod
   282  kubectl get pod --all-namespaces
+###we will create a secret in vault username and password. 
+ 286  vault write secrets/creds/kube username=giraffe password=salsa
+  287  vault kv get -format=json secrets/creds/kube | jq
+
