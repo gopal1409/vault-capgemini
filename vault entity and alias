@@ -27,4 +27,8 @@ capabilities = ["create","read","update","delete"]
   484  vault policy write test test.hcl
   485  vault policy write team-qa team-qa.hcl
   486  vault policy list
-
+###we will enable userpass auth method on a userpass-test
+ 492  vault auth enable -path="userpass-test" userpass
+  493  vault auth list
+####create a new user bob in userpass-test where the password is training and test policy is attached
+ 496  vault write auth/userpass-test/users/bob password="training" policies="test"
