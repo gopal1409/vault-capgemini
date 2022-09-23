@@ -7,3 +7,6 @@
   424  vault auth list
   425  vault auth disable vault-course
   426  vault auth list
+###how to add an auth method and modify the same
+  435  vault auth enable -path=gopal -description="local credentails for vault" userpass
+ 439  vault auth tune -default-lease-ttl=24h gopal/
