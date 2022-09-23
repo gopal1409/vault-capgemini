@@ -40,5 +40,6 @@ capabilities = ["create","read","update","delete"]
   503  cat accessor_qa.txt
   ###3create the entity and store the entity id 
    513  vault write -format=json identity/entity name="bob-smith" policies="base"      metadata=organization="ACME Inc."      metadata=team="QA"      | jq -r ".data.id" > entity_id.txt
-
+ 520  nano entity_id.txt
+##3copy the entity id from the ui and save it in above file
   ##3we will map entity with alias
