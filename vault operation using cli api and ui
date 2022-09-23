@@ -14,4 +14,6 @@
  441  vault write auth/gopal/users/john password=vault policies=gopal
   442  vault list auth/gopal/users
   443  vault read auth/gopal/users/john
-
+###how to enable auth role with token and policies
+445  vault auth enable approle
+  446  vault write auth/approle/role/gopal token_ttl=20m policies=gopal
