@@ -1,0 +1,4 @@
+###to do the same we will enable vault kv secret engine 2
+ 466  vault secret enable kv-v2
+471  vault kv enable-versioning secrets/
+ 472  vault secrets list -detailed
