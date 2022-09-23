@@ -10,3 +10,8 @@
 ###how to add an auth method and modify the same
   435  vault auth enable -path=gopal -description="local credentails for vault" userpass
  439  vault auth tune -default-lease-ttl=24h gopal/
+ ####how to tune an vault auth method
+ 441  vault write auth/gopal/users/john password=vault policies=gopal
+  442  vault list auth/gopal/users
+  443  vault read auth/gopal/users/john
+
