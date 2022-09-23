@@ -38,3 +38,7 @@ capabilities = ["create","read","update","delete"]
   501  cat accessor_text.txt
   502  vault auth list -format=json | jq -r '.["userpass-qa/"].accessor' > accessor_qa.txt
   503  cat accessor_qa.txt
+  ###3create the entity and store the entity id 
+   513  vault write -format=json identity/entity name="bob-smith" policies="base"      metadata=organization="ACME Inc."      metadata=team="QA"      | jq -r ".data.id" > entity_id.txt
+
+  ##3we will map entity with alias
