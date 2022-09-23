@@ -25,3 +25,7 @@ nano auth.json
 }
 ####
 453  curl --header "X-Vault-Token: hvs.PQNpZj1fhyH4VvTppasRMfYx" --request POST --data @auth.json http://127.0.0.1:8200/v1/sys/auth/approle
+
+###3once you created the user you can login withthe user
+vault login -method=userpass username=bob
+
