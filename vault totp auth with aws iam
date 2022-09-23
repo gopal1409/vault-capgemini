@@ -1,0 +1,2 @@
+ 579  vault secrets enable totp
+   581  vault secrets list
