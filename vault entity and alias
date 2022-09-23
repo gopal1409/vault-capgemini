@@ -45,9 +45,9 @@ capabilities = ["create","read","update","delete"]
  520  nano entity_id.txt
 ##3copy the entity id from the ui and save it in above file
   ##3we will map entity with alias
-522  vault write identity/entity-alias name="bob" canoncial_id=$(cat entity_id.txt) mount_accessor=$(cat accessor_text.txt) custom_metadata=account="Tester Account"
+522  vault write identity/entity-alias name="bob" canonical_id=$(cat entity_id.txt) mount_accessor=$(cat accessor_text.txt) custom_metadata=account="Tester Account"
   523  vault read identity/entity-alias/id/707bfaa3-04ff-a939-59e3-b09d9cbc9d2f
-  524  vault write identity/entity-alias name="bsmith" canoncial_id=$(cat entity_id.txt) mount_accessor=$(cat accessor_qa.txt) custom_metadata=account="Tester Account"
+  524  vault write identity/entity-alias name="bsmith" canonical_id=$(cat entity_id.txt) mount_accessor=$(cat accessor_qa.txt) custom_metadata=account="Tester Account"
   525  vault read -format=json identity/entity/id/$(cat entity_id.txt) | jq -r ".data"
   ###verify the entity and alias join
    527  vault read -format=json identity/entity/id/$(cat entity_id.txt) | jq -r ".data"
