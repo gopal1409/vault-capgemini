@@ -17,3 +17,11 @@
 ###how to enable auth role with token and policies
 445  vault auth enable approle
   446  vault write auth/approle/role/gopal token_ttl=20m policies=gopal
+########configure auth method using api call
+nano auth.json
+###inside auth.json file
+{
+ "type": "approle"
+}
+####
+453  curl --header "X-Vault-Token: hvs.PQNpZj1fhyH4VvTppasRMfYx" --request POST --data @auth.json http://127.0.0.1:8200/v1/sys/auth/approle
